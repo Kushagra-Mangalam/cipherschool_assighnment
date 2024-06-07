@@ -1,0 +1,6 @@
+step_1- Download the unity hub software from unity website (https://unity.com/download).
+step_2- The setup will be downloaded in your laptop , now install that setup .
+step_3- After downloading setup download the latest(LTS) version of unity editor .
+        if the download fails and it shows validation error then download the editor seprately   (https://unity.com/releases/editor/whats-new/2022.3.32#installs)
+         and just locate it onto the unity hub.
+step_4-now choose the 3d model project and create the new project with the appropriate name.
