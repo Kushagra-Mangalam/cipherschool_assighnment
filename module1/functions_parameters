@@ -1,0 +1,31 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class functions : MonoBehaviour
+{
+    public int num3;
+    public int num4;
+    // Start is called before the first frame update
+    void Start()
+    {
+       int result= add(num3,num4);
+        Debug.Log(result);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+     
+        
+    }
+
+    //customized function 
+    public int add(int num1 , int num2)   //if we dont write any access specifier it will be by deafult private
+    {
+        int result = num1 + num2;
+       // Debug.Log("this a add function");
+       return result;
+    }
+}
+ 
