@@ -1,0 +1,24 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class scoremanager : MonoBehaviour
+{
+    public static scoremanager instance; //this line helps in singleton so that it can connect with different script
+
+   private int score=0;
+
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        }
+    }
+
+    public void Addscore(int points)
+    {
+        score += points;
+
+    }
+}
