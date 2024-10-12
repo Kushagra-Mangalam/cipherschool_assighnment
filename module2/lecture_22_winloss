@@ -1,0 +1,27 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class 
+    collectableManager: MonoBehaviour
+{
+    int childCount = 0;
+
+    public bool allcoincollected = false;
+    private void Start()
+    {
+        childCount = transform.childCount;
+    }
+    private void Update()
+    {
+        if (transform.childCount < childCount)
+        {
+            childCount = transform.childCount;
+
+            if (childCount == 0)
+            {
+                allcoincollected = true;
+            }
+        }
+    }
+}
