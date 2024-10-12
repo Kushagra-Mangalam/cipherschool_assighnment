@@ -1,0 +1,31 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ball_move : MonoBehaviour
+{
+    public float speed;
+    private string tag_wall = "wall";
+
+    // Update is called once per frame
+    void Update()
+    {
+        float horizontalinput = Input.GetAxis("Horizontal");
+        float vertcalinput = Input.GetAxis("Vertical");
+        float jump = Input.GetAxis("Jump");
+        Vector3 movement = new Vector3(horizontalinput, jump, vertcalinput) * speed * Time.deltaTime;
+
+
+        Rigidbody rb = GetComponent<Rigidbody>();
+        rb.AddForce(movement, ForceMode.Impulse);
+
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == tag_wall)
+        {
+            ScoreManager.instance.AddScore(-1);
+        }
+
+    }
+}
